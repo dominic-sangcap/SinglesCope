@@ -2,3 +2,38 @@ h1 {
     color: red;
     text-align: center;
 }
+
+ /*Section 2-------------*/
+ /* aligning section 2; "table lookin format"*/
+ul {
+    margin: 0;
+    padding: 0;
+    width: 30rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li {
+    display: inline-block;
+}
+
+form {
+    width: 30rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*rows and column currently in reference to sections 2 and 3*/
+.row-2 {
+    display: block;
+}
+
+.row-2 .col-1 {
+    display: inline-block;
+    width: 25%;
+}
+
+.row-2 .col-2 {
+    display: inline-block;
+}
