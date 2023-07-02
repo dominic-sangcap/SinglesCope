@@ -23,7 +23,6 @@ form {
     justify-content: space-between;
 }
 
-
 /*rows and column currently in reference to sections 2 and 3*/
 .row-2 {
     display: block;
@@ -36,4 +35,21 @@ form {
 
 .row-2 .col-2 {
     display: inline-block;
+}
+
+/* Section 3 */
+.slide-size {
+    width: 20rem
+}
+
+.row-3 {
+    display: flex;
+}
+ /* User input fields generated in section 2 and 3 */
+.db-mh-input {
+    border-bottom: dashed;
+}
+
+.fq-input{
+    border-bottom: dashed;
 }
