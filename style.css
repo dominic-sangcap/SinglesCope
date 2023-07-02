@@ -39,13 +39,10 @@ form {
 
 /* Section 3 */
 .slide-size {
-    width: 20rem
+    width: 30rem;
 }
 
-.row-3 {
-    display: flex;
-}
- /* User input fields generated in section 2 and 3 */
+/* User input fields generated in section 2 and 3 */
 .db-mh-input {
     border-bottom: dashed;
 }
