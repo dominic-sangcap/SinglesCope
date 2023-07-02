@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!---testing js stuff that happens
+    <script src="inputCode.js" defer></script>
+    -->
+    <script src="todo.js" defer></script>
     <title>Document</title>
 </head>
 <!---Website references
 create dynamic form and radio buttons:
 https://softauthor.com/javascript-dynamic-html-radio-button/#:~:text=Add%20Radio%20Buttons%20Dynamically,to%20a%20variable%20called%20input.&text=Then%2C%20change%20its%20input%20type,element%20to%20the%20label%20element.
 
-
+create dyanmic data from form: @18:30
+https://www.youtube.com/watch?v=ecKw7FfikwI&list=PL7g5NKsa9hm4RJiw7Yc5r32Z8sgqkF_qo&index=11
 -->
 
 <body>
@@ -25,8 +30,10 @@ https://softauthor.com/javascript-dynamic-html-radio-button/#:~:text=Add%20Radio
     <!--- Dealbreaker & Must Haves Input field and Add button -->
     <div class="section1.1">
         <div> *Dealbreakers & Must-Haves</div>
-        <input type="text">
-        <button type="button" class="Add1">Add +</button>
+        <form id="todo-form">
+            <input type="text" placeholder="Enter something" id="todo-input">
+            <button type="submit" class="Add1">Add +</button>
+        </form>
     </div>
     <br>
     <!--- Favorable Qualities Input field and Add button -->
@@ -63,11 +70,14 @@ https://softauthor.com/javascript-dynamic-html-radio-button/#:~:text=Add%20Radio
                 <input class="radio-form" type="radio" name="option">
                 <input class="radio-form" type="radio" name="option">
             </form>
-            <!--where a dynamic radio thingy would be created-->
-            <div id="radioBtnDynamic">
-                
-            </div>
+            
         </div>
+    </div>
+    <div class="temp" id="todo-lane"></div>
+
+    <!--- where a dynamic radio thingy would be created-->
+    <div id="radioBtnDynamic">
+                
     </div>
     <br><br>
 
@@ -127,8 +137,8 @@ https://softauthor.com/javascript-dynamic-html-radio-button/#:~:text=Add%20Radio
     <br><br>
 
     <!--- Section 9 -->
-    <div>Section 9</div>
-    <div>How to Use Website...</div>
+    <div>Section 9, ATM test zone</div>
+    <p draggable="true">How to Use Website...</p>
     <br>
 
     <!--- Section 10 -->
