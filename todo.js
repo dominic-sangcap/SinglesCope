@@ -10,6 +10,8 @@ const data = {
     "must-have": false,
 }
 
+let dbmhCount = 0;
+
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const value = input.value;
@@ -36,7 +38,7 @@ form.addEventListener("submit", (e) => {
         let input = document.createElement("input");
         input.type = "radio";
         //this makes all instance of current buttons unique click amongst group
-        input.name = "option";
+        input.name = "option" + dbmhCount; //need to add dynamicstring name so all buttons are different
         //allow for checking radio button state change
         input.addEventListener('change', () => {
             Object.keys(data).forEach(key => {
@@ -47,11 +49,9 @@ form.addEventListener("submit", (e) => {
         label.appendChild(input);
         todoLane.appendChild(label);
     }
-
-
-
-
+    //fix this bc w/o it the input inline outputs, since previous element doesnt extend to entire line
+    todoLane.appendChild(document.createElement('br'));
     //end test area
-
+    dbmhCount += 1;
     input.value = "";
 });
