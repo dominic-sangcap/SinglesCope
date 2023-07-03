@@ -8,6 +8,7 @@
     <script src="inputCode.js" defer></script>
     -->
     <script src="todo.js" defer></script>
+    <script src="todo2.js" defer></script>
     <title>Document</title>
 </head>
 <!---Website references
@@ -39,8 +40,10 @@ https://www.youtube.com/watch?v=ecKw7FfikwI&list=PL7g5NKsa9hm4RJiw7Yc5r32Z8sgqkF
     <!--- Favorable Qualities Input field and Add button -->
     <div class="section1.2">
         <div> *Favorable Qualities</div>
-        <input type="text">
-        <button type="button" class="Add2">Add +</button>
+        <form id="todo-form2">
+            <input type="text" placeholder="Enter something" id="todo-input2">
+            <button type="submit" class="Add2">Add +</button>
+        </form>
     </div>
     <br>
 
@@ -53,9 +56,9 @@ https://www.youtube.com/watch?v=ecKw7FfikwI&list=PL7g5NKsa9hm4RJiw7Yc5r32Z8sgqkF
         <div class="col-1">Empty Space</div>
         <div class="col-2">
             <ul>
-                <li>Dealbreaker</li>
-                <li>Indifferent</li>
-                <li>Must-Haves</li>
+                <li>Dealbreaker*</li>
+                <li>Indifferent*</li>
+                <li>Must-Haves*</li>
             </ul>
         </div>
     </div>
@@ -77,10 +80,8 @@ https://www.youtube.com/watch?v=ecKw7FfikwI&list=PL7g5NKsa9hm4RJiw7Yc5r32Z8sgqkF
         <!--
             -p
             -series of labels
-        -->
-        
+        -->   
     </div>
-    
     <br>
 
     <!--- Section 3 -->
@@ -95,8 +96,8 @@ https://www.youtube.com/watch?v=ecKw7FfikwI&list=PL7g5NKsa9hm4RJiw7Yc5r32Z8sgqkF
         <div class="col-2">
             <ul>
                 <li>Less Ideal*</li>
-                <li>Mid</li>
-                <li>*More Ideal</li>
+                <li>Mid*</li>
+                <li>More Ideal*</li>
             </ul>
         </div>
     </div>
@@ -106,8 +107,17 @@ https://www.youtube.com/watch?v=ecKw7FfikwI&list=PL7g5NKsa9hm4RJiw7Yc5r32Z8sgqkF
         <!--Make like Section 2, put less ideal more ideal in own header category-->
         <div class="col-1 fq-input">Ex. Has A Holiday Birthday</div>
         <div class="col-2">
-            <input class="slide-size" type="range" min="-5" max="5" value="0"></input>
+            <input class="slide-size" type="range" min="0" max="10" value="5"></input>
         </div>
+    </div>
+    <br>
+
+    <!--- where a dynamic user input paragraph would be created-->
+    <div class="row-2" id="todo-lane2">
+        <!--
+            -p
+            -series of labels
+        -->   
     </div>
     <br>
 
