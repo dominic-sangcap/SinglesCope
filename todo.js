@@ -25,11 +25,6 @@ form.addEventListener("submit", (e) => {
     todoLane.appendChild(newTask);
 
     //testing 2 input formats
-    /*const newTask2 = document.createElement("p");
-    newTask2.classList.add("task", "db-mh-input", "col-2");
-    newTask2.innerText = value+"2*******************";
-    todoLane.appendChild(newTask2);*/
-    //
     for (let key in data) {
         //might not need this label creation
         let label = document.createElement("label");
