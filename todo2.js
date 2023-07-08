@@ -33,8 +33,9 @@ form2.addEventListener("submit", (e) => {
     divElement.appendChild(rangeSlider);
     todoLane2.appendChild(divElement);
     
-    //fix this bc w/o it the input inline outputs, since previous element doesnt extend to entire line
-    //todoLane.appendChild(document.createElement('br'));
+    //for visual refernces
+    todoLane2.appendChild(document.createElement('br'));
+    
     //end test area
     fqCount += 1;
     input2.value = "";

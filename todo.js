@@ -25,6 +25,11 @@ form.addEventListener("submit", (e) => {
     todoLane.appendChild(newTask);
 
     //testing 2 input formats
+    //encapsulate in a div
+    let divElement = document.createElement("div");
+    divElement.classList.add("col-2");
+
+    //get rid of this jargon, and just copy what i have in html template, and refernce later???
     for (let key in data) {
         //might not need this label creation
         let label = document.createElement("label");
@@ -42,8 +47,12 @@ form.addEventListener("submit", (e) => {
             data[key] = true;
         });
         label.appendChild(input);
-        todoLane.appendChild(label);
+        divElement.appendChild(label);
     }
+
+    //put div element into todo Lane
+    todoLane.appendChild(divElement);
+
     //fix this bc w/o it the input inline outputs, since previous element doesnt extend to entire line
     todoLane.appendChild(document.createElement('br'));
     //end test area
