@@ -1,10 +1,41 @@
+//reference to button object rhough mutlipe element???
+
+
+function buttonSelect() {
+
+    var outerDiv = document.getElementById('outerDiv');
+    var innerDiv = outerDiv.querySelector('#innerDiv2');
+    var form = innerDiv.querySelector('#testForm');
+    var radioBtn = form.querySelectorAll('.radio-form');
+    var selectedOption;
+
+    for (var i = 0; i < radioBtn.length; i++) {
+      if (radioBtn[i].checked) {
+        selectedOption = radioBtn[i].value;
+        break;
+      }
+    }
+  
+    if (selectedOption) {
+      console.log("Selected color: " + selectedOption);
+    } else {
+      console.log("No color selected.");
+    }
+    
+  }
+/*
+//og code
 function getSelectedOption() {
-    var fromForm = document.getElementsByClassName('option');
+
+    var outerDiv = document.getElementById('outerDiv');
+    var innerDiv = outerDiv.querySelector('#innerDiv2');
+    var form = innerDiv.querySelector('#testForm');
+    var radioBtn = form.getSelectorAll('.radio-form');
     var selectedOption;
   
-    for (var i = 0; i < fromForm.length; i++) {
-      if (fromForm[i].checked) {
-        selectedOption = fromForm[i].value;
+    for (var i = 0; i < radioBtn.length; i++) {
+      if (radioBtn[i].checked) {
+        selectedOption = radioBtn[i].value;
         break;
       }
     }
@@ -15,4 +46,4 @@ function getSelectedOption() {
       console.log("No color selected.");
     }
   }
-  
+  */
