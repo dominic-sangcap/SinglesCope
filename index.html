@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!---testing js stuff that happens
-    <script src="inputCode.js" defer></script>
-    -->
+    
+    <script src="buttonSelect.js" defer></script>
     <script src="todo.js" defer></script>
     <script src="todo2.js" defer></script>
     <title>Document</title>
@@ -70,9 +69,10 @@ https://www.youtube.com/watch?v=ecKw7FfikwI&list=PL7g5NKsa9hm4RJiw7Yc5r32Z8sgqkF
         <div class="col-1 db-mh-input">Ex. Doesn't like Boba</div>
         <div class="col-2">
             <form id="testMe">
-                <input class="radio-form" type="radio" name="option">
-                <input class="radio-form" type="radio" name="option">
-                <input class="radio-form" type="radio" name="option">
+                <input class="radio-form" type="radio" value="dealbreaker"  name="option">
+                <input class="radio-form" type="radio" value="indifferent" name="option">
+                <input class="radio-form" type="radio" value="musthave" name="option">
+                <button onclick="buttonSelect()">Test Console</button>
             </form>
         </div>
     </div>
