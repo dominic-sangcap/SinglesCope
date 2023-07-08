@@ -29,6 +29,11 @@ form.addEventListener("submit", (e) => {
     let divElement = document.createElement("div");
     divElement.classList.add("col-2");
 
+    //encapsulate labels and input into a form
+    let formElement = document.createElement("form");
+    let dynamFormid = "form-" + dbmhCount;
+    formElement.id = dynamFormid;
+
     //get rid of this jargon, and just copy what i have in html template, and refernce later???
     for (let key in data) {
         //might not need this label creation
@@ -38,7 +43,7 @@ form.addEventListener("submit", (e) => {
         let input = document.createElement("input");
         input.type = "radio";
         //this makes all instance of current buttons unique click amongst group
-        input.name = "option" + dbmhCount; //need to add dynamicstring name so all buttons are different
+        input.name = "option" + dbmhCount.toString(); //need to add dynamicstring name so all buttons are different
         //allow for checking radio button state change
         input.addEventListener('change', () => {
             Object.keys(data).forEach(key => {
@@ -47,8 +52,11 @@ form.addEventListener("submit", (e) => {
             data[key] = true;
         });
         label.appendChild(input);
-        divElement.appendChild(label);
+        formElement.appendChild(label);
     }
+
+    //put form element into todo Lane
+    divElement.appendChild(formElement);
 
     //put div element into todo Lane
     todoLane.appendChild(divElement);

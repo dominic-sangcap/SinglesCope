@@ -28,7 +28,7 @@ form2.addEventListener("submit", (e) => {
     rangeSlider.value = "5";
     rangeSlider.classList.add("slide-size");
     //this makes all instance of current buttons unique click amongst group
-    rangeSlider.name = "option" + dbmhCount;
+    rangeSlider.name = "option" + fqCount.toString();
 
     divElement.appendChild(rangeSlider);
     todoLane2.appendChild(divElement);
