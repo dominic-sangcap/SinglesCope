@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     
+    <script src="rangeSelect.js" defer></script>
     <script src="buttonSelect.js" defer></script>
     <script src="todo.js" defer></script>
     <script src="todo2.js" defer></script>
@@ -67,7 +68,7 @@ https://www.youtube.com/watch?v=ecKw7FfikwI&list=PL7g5NKsa9hm4RJiw7Yc5r32Z8sgqkF
     <!---User inputted data and radio buttons-->
     <div class="row-2" id="outerDiv">
         <div class="col-1 db-mh-input">Ex. Doesn't like Boba</div>
-        <div class="col-2" id="innerDiv2">
+        <div class="col-2" id="innerDiv">
             <form id="testForm" name="noName">
                 <input class="radio-form" type="radio" value="dealbreaker"  name="option">
                 <input class="radio-form" type="radio" value="indifferent" name="option">
@@ -104,10 +105,11 @@ https://www.youtube.com/watch?v=ecKw7FfikwI&list=PL7g5NKsa9hm4RJiw7Yc5r32Z8sgqkF
     </div>
     <br>
 
-    <div class="row-2">
+    <div class="row-2" id="outerDiv2">
         <div class="col-1 fq-input">Ex. Has A Holiday Birthday</div>
-        <div class="col-2">
-            <input class="slide-size" type="range" min="0" max="10" value="5"></input>
+        <div class="col-2" id="innerDiv2">
+            <input class="slide-size" type="range" min="0" max="10" value="5" id="ocRange"></input>
+            <button type="button" onclick="rangeSelect()">Test Console2</button>
         </div>
     </div>
     <br>

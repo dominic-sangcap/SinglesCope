@@ -28,6 +28,8 @@ form.addEventListener("submit", (e) => {
     //encapsulate in a div
     let divElement = document.createElement("div");
     divElement.classList.add("col-2");
+    //add unique id here???
+    divElement.id = "testDynam" + dbmhCount.toString();
 
     //encapsulate labels and input into a form
     let formElement = document.createElement("form");

@@ -1,10 +1,8 @@
-//reference to button object rhough mutlipe element???
-
-
+//reference to button object rhough mutlipe element
 function buttonSelect() {
 
     var outerDiv = document.getElementById('outerDiv');
-    var innerDiv = outerDiv.querySelector('#innerDiv2');
+    var innerDiv = outerDiv.querySelector('#innerDiv');
     var form = innerDiv.querySelector('#testForm');
     var radioBtn = form.querySelectorAll('.radio-form');
     var selectedOption;
@@ -17,9 +15,9 @@ function buttonSelect() {
     }
   
     if (selectedOption) {
-      console.log("Selected color: " + selectedOption);
+      console.log("Selected button: " + selectedOption);
     } else {
-      console.log("No color selected.");
+      console.log("No button selected.");
     }
     
   }
