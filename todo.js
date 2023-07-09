@@ -33,7 +33,7 @@ form.addEventListener("submit", (e) => {
 
     //encapsulate labels and input into a form
     let formElement = document.createElement("form");
-    let dynamFormid = "form-" + dbmhCount;
+    let dynamFormid = "form-" + dbmhCount.toString();
     formElement.id = dynamFormid;
 
     //get rid of this jargon, and just copy what i have in html template, and refernce later???

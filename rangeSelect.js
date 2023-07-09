@@ -1,5 +1,5 @@
 function rangeSelect() {
-
+    //div-div-input[range]
     var outerDiv = document.getElementById('outerDiv2');
     var innerDiv = outerDiv.querySelector('#innerDiv2');
     var slideRange = innerDiv.querySelector('#ocRange');
