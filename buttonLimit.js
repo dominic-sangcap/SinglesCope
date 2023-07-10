@@ -7,17 +7,22 @@ var updateCounter = document.getElementById('update_counter');
 
 add_dB_Button.addEventListener("click", () => {
     addCount++;
-    //update max count from user input
-    updateCounter.innerHTML++;
     console.log("Add Count = " + addCount);
+
+    //consider disabling button before it gets to over max number???
     if (addCount > maxCount) {
         //might have to disable this in the future???
         add_dB_Button.disabled = true;
         console.log('Max Submissions reached')
         //reset addCount by 1 to maintain correct size var
         addCount--;
-        //reference text field and clear it???
+        //reference text field and make pop up message somewhere 
+        let clearMe = document.getElementById('todo-input');
+        clearMe.value = 'Silly Goose, The max is 5';
+    }
 
-        //make pop up message somewhere
+    else {
+        //update max count from user input
+        updateCounter.innerHTML++;
     }
 });
