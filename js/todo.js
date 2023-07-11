@@ -44,6 +44,8 @@ form.addEventListener("submit", (e) => {
         //radio button creation -- the juice
         let input = document.createElement("input");
         input.type = "radio";
+        //substantiate the input value with a corresponding value == innerText
+        input.value = key;
         //this makes all instance of current buttons unique click amongst group
         input.name = "option" + dbmhCount.toString(); //need to add dynamicstring name so all buttons are different
         //allow for checking radio button state change

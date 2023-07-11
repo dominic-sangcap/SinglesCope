@@ -8,7 +8,7 @@ function buttonSelect() {
   var selectedOption = form.querySelector('input[name="option"]:checked');
 
   if (selectedOption) {
-      var selectedValue = selectedOption.value;
+    var selectedValue = selectedOption.value;
     console.log("Selected button: " + selectedValue);
   } else {
     console.log("No button selected.");
