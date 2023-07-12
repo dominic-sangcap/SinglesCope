@@ -10,10 +10,10 @@ function makeUser() {
 
     //do nothing if user not input anything yet
     if (!size && !size2) {
-        console.log("size1: " + size + "size2: " + size2);
+        //console.log("size1: " + size + "size2: " + size2);
         return;
     }
-    //*/
+
     //recreate DB part
     const todoLane3 = document.getElementById("todo-lane3");
     for (let i = 0; i < size; i++) {
@@ -108,5 +108,7 @@ function makeUser() {
         //for visual refernces
         todoLane4.appendChild(document.createElement('br'));
     }
-    //*/
+    //disable lock in button, so no more adding onto 2nd+ user
+    const user1Btn = document.getElementById('Lock-In-Btn');
+    user1Btn.disabled = true;
 }
