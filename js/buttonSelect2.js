@@ -1,4 +1,6 @@
-//reference to button object rhough mutlipe element
+//schedule to delete this js folder/function, i believe this is merely testing ground code
+
+//reference to button object rhough multipe element
 function buttonSelect2() {
     //using 0th element as test case, will have to variable this element
     //string + num apparently = stringvalue; @innerDiv, form, selectedOption....pElement

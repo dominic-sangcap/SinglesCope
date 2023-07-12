@@ -1,3 +1,5 @@
+//possibly git rid of this file, testing ground for static code generated
+
 //reference to button object rhough mutlipe element
 function buttonSelect() {
   //div-div-form-amongst inut[radio]

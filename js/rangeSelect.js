@@ -1,3 +1,5 @@
+//schedule for deletion, was testing ground for static html elemnts
+
 function rangeSelect() {
     //div-div-input[range]
     var outerDiv = document.getElementById('outerDiv2');

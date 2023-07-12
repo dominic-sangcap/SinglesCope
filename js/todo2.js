@@ -1,4 +1,4 @@
-//after user inserts data into form, create an entry in respective area
+//dynamic creation from user input into form for section 2.2
 const form2 = document.getElementById("todo-form2");
 const input2 = document.getElementById("todo-input2");
 const todoLane2 = document.getElementById("todo-lane2");
@@ -21,7 +21,7 @@ form2.addEventListener("submit", (e) => {
     let divElement = document.createElement("div");
     divElement.classList.add("col-2");
     //add unique id here???
-    divElement.id = "testDynam" + fqCount.toString();
+    divElement.id = "testDynam2" + fqCount.toString();
 
     var rangeSlider = document.createElement("input");
     rangeSlider.type = "range";
@@ -29,7 +29,7 @@ form2.addEventListener("submit", (e) => {
     rangeSlider.max = "10";
     rangeSlider.value = "5";
     rangeSlider.classList.add("slide-size");
-    //this makes all instance of current buttons unique click amongst group, not need name one???
+    //this makes all instance of current buttons unique click amongst group, not need name one unless needed for css purposes
     rangeSlider.name = "option" + fqCount.toString();
     rangeSlider.id = "uniqueID" + fqCount.toString();
 

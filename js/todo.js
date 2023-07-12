@@ -1,4 +1,4 @@
-//after user inserts data into form, create an entry in respective area
+//dynamic creation from user input into form for section 2.1
 const form = document.getElementById("todo-form");
 const input = document.getElementById("todo-input");
 const todoLane = document.getElementById("todo-lane");
@@ -48,7 +48,7 @@ form.addEventListener("submit", (e) => {
         input.value = key;
         //this makes all instance of current buttons unique click amongst group
         input.name = "option" + dbmhCount.toString(); //need to add dynamicstring name so all buttons are different
-        //allow for checking radio button state change
+        //allow for checking radio button state change, honestly dont even know if this works or nots
         input.addEventListener('change', () => {
             Object.keys(data).forEach(key => {
                 data[key] = false;
