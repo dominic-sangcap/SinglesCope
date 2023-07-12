@@ -6,10 +6,12 @@ var maxCount2 = 5; //allows for 5 entries
 var updateCounter2 = document.getElementById('update_counter2');
 
 add_dB_Button2.addEventListener("click", () => {
+    //console.log("what is happening???, num:")
     //if get input is empty, do nothing
-    const value = input.value;
-    if (!value) return;
-    
+    //hard note, since there are two event listeners on this button, gotta have variables consistent across stuff or something
+    const value2 = input2.value;
+    if (!value2) return;
+
     addCount2++;
 
     if (addCount2 > maxCount2) {
@@ -19,7 +21,7 @@ add_dB_Button2.addEventListener("click", () => {
         addCount2--;
         //reference text field, clear it and make pop up message in textField 
         let clearMe2 = document.getElementById('todo-input2');
-        clearMe2.value = 'Silly Goose, The max is 5';
+        clearMe2.value2 = 'Silly Goose, The max is 5';
     }
     else {
         //update max count from user input
