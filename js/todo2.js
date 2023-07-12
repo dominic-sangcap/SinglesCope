@@ -20,6 +20,8 @@ form2.addEventListener("submit", (e) => {
     //testing 2 input formats
     let divElement = document.createElement("div");
     divElement.classList.add("col-2");
+    //add unique id here???
+    divElement.id = "testDynam" + fqCount.toString();
 
     var rangeSlider = document.createElement("input");
     rangeSlider.type = "range";
@@ -27,8 +29,9 @@ form2.addEventListener("submit", (e) => {
     rangeSlider.max = "10";
     rangeSlider.value = "5";
     rangeSlider.classList.add("slide-size");
-    //this makes all instance of current buttons unique click amongst group
+    //this makes all instance of current buttons unique click amongst group, not need name one???
     rangeSlider.name = "option" + fqCount.toString();
+    rangeSlider.id = "uniqueID" + fqCount.toString();
 
     divElement.appendChild(rangeSlider);
     todoLane2.appendChild(divElement);
