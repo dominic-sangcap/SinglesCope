@@ -7,7 +7,9 @@ var updateCounter = document.getElementById('update_counter');
 
 add_dB_Button.addEventListener("click", () => {
     //if get input is empty, do nothing
-    
+    const value = input.value;
+    if (!value) return;
+
     addCount++;
 
     //consider disabling button before it gets to over max number???

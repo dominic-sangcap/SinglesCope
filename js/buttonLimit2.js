@@ -7,7 +7,9 @@ var updateCounter2 = document.getElementById('update_counter2');
 
 add_dB_Button2.addEventListener("click", () => {
     //if get input is empty, do nothing
-
+    const value = input.value;
+    if (!value) return;
+    
     addCount2++;
 
     if (addCount2 > maxCount2) {
