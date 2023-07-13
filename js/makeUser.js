@@ -34,7 +34,7 @@ function makeUser() {
 
         //encapsulate labels and input into a form
         let formElement = document.createElement("form");
-        let dynamFormid = "form-" + i;
+        let dynamFormid = "form2-" + i;
         formElement.id = dynamFormid;
 
         //get rid of this jargon, and just copy what i have in html template, and refernce later???
@@ -99,8 +99,8 @@ function makeUser() {
         rangeSlider.value = "5";
         rangeSlider.classList.add("slide-size");
         //this makes all instance of current buttons unique click amongst group, not need name one unless needed for css purposes
-        rangeSlider.name = "option" + j;
-        rangeSlider.id = "uniqueID" + j;
+        rangeSlider.name = "option2" + j;
+        rangeSlider.id = "uniqueID2" + j;
 
         divElement.appendChild(rangeSlider);
         todoLane4.appendChild(divElement);
