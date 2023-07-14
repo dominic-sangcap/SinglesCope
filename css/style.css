@@ -8,8 +8,12 @@ h1 {
 }
 
 /*Seciton 1*/
-.fade_this,  .fade_this2 {
+.fade_this, .fade_this2 {
     opacity: .4;
+}
+
+.form-container .last-element {
+    margin-right: 25px;
 }
 
 

@@ -43,22 +43,22 @@
     <!--- Dealbreaker & Must Haves Input field and Add button -->
     <div class="section1.1">
         <div>*Dealbreakers & Must-Haves</div>
-        <form id="todo-form">
+        <form id="todo-form" class="form-container">
             <input type="text" placeholder="Enter something" maxlength="25" id="todo-input">
             <button type="submit" class="Add1" id="add_dB">Add +</button>
             <div class="fade_this">*up to 5, currently at:</div>
-            <div class="fade_this" id="update_counter">0</div>
+            <div class="fade_this2 last-element" id="update_counter">0</div>
         </form>
     </div>
     <br>
     <!--- Favorable Qualities Input field and Add button -->
     <div class="section1.2">
         <div>*Other Considerations</div>
-        <form id="todo-form2">
+        <form id="todo-form2" class="form-container">
             <input type="text" placeholder="Enter something" maxlength="25" id="todo-input2">
             <button type="submit" class="Add2" id="add_oC">Add +</button>
-            <div class="fade_this2">*up to 5, currently at:</div>
-            <div class="fade_this" id="update_counter2">0</div>
+            <div class="fade_this">*up to 5, currently at:</div>
+            <div class="fade_this2 last-element" id="update_counter2">0</div>
         </form>
     </div>
     <br>
@@ -114,7 +114,7 @@
     <!-- Maybe have something at top of range slider sections for clarity purposes-->
     <!---User inputted data and range slider-->
     <div class="row-2">
-        <div class="col-1">Empty Space</div>
+        <div class="col-1" style="visibility: hidden;">Empty Space</div>
         <div class="col-2">
             <ul>
                 <li>Less Ideal*</li>
@@ -164,6 +164,20 @@
     <div class="bold">Section 3.2</div>
     <div>Other Considerations</div>
     <br>
+
+    <!-- needs id so when create user, i can unvisible this section-->
+    <div class="row-2" style="visibility: hidden;" id="wasHidden1">
+        <div class="col-1" style="visibility: hidden;">Empty Space</div>
+        <div class="col-2">
+            <ul>
+                <li>Less Ideal*</li>
+                <li>Mid*</li>
+                <li>More Ideal*</li>
+            </ul>
+        </div>
+    </div>
+    <br>
+
     <div class="row-2" id="todo-lane4"> 
     </div> 
     <!-- test if -->

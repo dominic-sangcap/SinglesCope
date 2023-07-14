@@ -1,3 +1,4 @@
+//create the *2nd users form
 //create th portion of dealbreakers again, ideally unselected radio buttons
 function makeUser() {
     //get data form from first user: Need---------------New code
@@ -111,4 +112,14 @@ function makeUser() {
     //disable lock in button, so no more adding onto 2nd+ user
     const user1Btn = document.getElementById('Lock-In-Btn');
     user1Btn.disabled = true;
+
+    //also disable Add+ buttons, so no more fields can be created for first user
+    const dbBtn = document.getElementById('add_dB');
+    dbBtn.disabled = true;
+    const ocBtn = document.getElementById('add_oC');
+    ocBtn.disabled = true;
+
+    //turn off hidden visiblity when makining second user in section 3.2, probably turn this into a function later
+    const hiddenBtn = document.getElementById('wasHidden1');
+    hiddenBtn.style.visibility = "visible";
 }
