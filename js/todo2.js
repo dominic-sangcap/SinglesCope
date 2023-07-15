@@ -11,6 +11,12 @@ form2.addEventListener("submit", (e) => {
 
     if (!value2) return;
 
+    //turn section 2.2 into display: block; on first instance only
+    if (fqCount == 0) {
+        const hiddenBtn = document.getElementById('wasHidden0');
+        hiddenBtn.style.display = "block";
+    }
+
     const newTask2 = document.createElement("p");
     newTask2.classList.add("task", "fq-input", "col-1");
     newTask2.innerText = value2;

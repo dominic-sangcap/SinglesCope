@@ -1,3 +1,4 @@
+//Explanation of what should happen, what sections interact across one another
 //Section 0
 /*
 Note: honestly dont need right now, makes more sense if i switch UI to page/step based format
@@ -21,7 +22,7 @@ Note:
     when[userInput] -> Add+:
     then 
         - Add dealB inputText to section 2.1, Add radio button choices, Update count
-        - Add otherC inputText to section 2.2, Add range slider, Update count
+        - Add otherC inputText to section 2.2, Add range slider, Update count, display: block on section 2.2 list
 
     if inputCount = maxAllowed:
     then
@@ -29,8 +30,28 @@ Note:
 */
 
 //Section 2
+/*
+    2.1
+    -allow for radio btnChoice
+    2.2
+    -display: block; if user puts in OC
+    -allow for rangeSliderChoice
+*/
 
 //Section 3
+/*
+    when Loc-In Answ Btn:
+    then
+        - if !empty, populate 3.1 w/ all same dealB/mustH from 2.1
+        - if !empty, populate 3.2 w/ all same otherC from 2.2
+        - disable Add+ Btns from Section 1
+
+    3.1
+    -allow for radio btnChoice
+    3.2
+    -display: block; if user puts in OC
+    -allow for rangeSliderChoice
+*/
 
 //Section 4
 
