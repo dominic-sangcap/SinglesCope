@@ -51,18 +51,63 @@ Note:
     3.2
     -display: block; if user puts in OC
     -allow for rangeSliderChoice
+
+    TODO: maybe-freeze user1 input via 
+    for loop:
+        radiBtn[i].disabled = true;
+    for loop:
+        rangeSlider.disabled = true;
 */
 
 //Section 4
+/*
+    Currently dont need, but probably freeze input from 2nd user
+*/
 
 //Section 5
+/*
+    TODO: 
+        send values into storeData variables
+        Do the calculations
+        store calculations somewhere
+*/
 
 //Section 6
+/*
+    TODO: 
+        use predetermined % set, and x/x set
+        {
+            > 100%, give them the world
+            > 90%, should be dating
+            .....
+        },
+        {
+            20/20 = yall see eye to eye
+            ....
+        }
+*/
 
 //Section 7
+/*
+    TODO:
+        hard recap stats, compare side by side
+        explain how percentages work
+*/
 
 //Section 8
+/*
+    TODO:
+        *For now: Import Test data set for user 1, update count(could allow user to add more on top of this)
+        **Do Later: Import Export Capability, like pokemon showdown
+*/
 
 //Section 9
+/*
+    TODO: 
+        *NOt obligated to do this, but it might help someone
+*/
 
 //Section 10
+/*
+    Its in fine print....
+*/
