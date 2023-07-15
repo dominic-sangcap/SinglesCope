@@ -11,17 +11,21 @@ class userData {
     constructor() {
         this.userData= [[], []];
     }
+
     setValue1(stringVar, btnChoice) {
         this.userData[0].push([stringVar, btnChoice]);
     }
+
     setValue2(stringVar2, rangeVal) {
         this.userData[1].push([stringVar2, rangeVal]);
     }
-    getValue() {
-        //returns a copy of all user data in 
-        console.log("AM i in getValue???");
+
+    //dont know if this is needed
+    getUserData() {
         return this.userData;
     }
+
+    //returns a value at key
     getValueAt(outerIndex, innerIndex) {
         //getValue at specified index
         if (outerIndex >= 0 && outerIndex < this.userData.length) {
@@ -32,37 +36,30 @@ class userData {
         }
         return null;
     }
+    //write to html, testing IP
+    getValue() {
+        //returns a copy of all user data in 
+        const outputElement = document.getElementById('output');
+
+        //console.log("AM i in getValue???");
+
+        let output = '';
+        this.userData.forEach((data, index) => {
+            output += `User ${index + 1}: `;
+            data.forEach((item) => {
+                output += `${item}, `;
+            });
+            output = output.slice(0, -2); // Remove the extra comma and space
+            output += "<br>";
+        });
+
+        outputElement.innerHTML = output;
+    }
+    
 }
+//dont need these functions???? that were defined in storeData
 
-function setValue1(stringVar, btnChoice) {
-    userData.setValue1(stringVar, btnChoice);
-}
-
-function setValue2(stringVar2, rangeVal) {
-    userData.setValue2(stringVar2, rangeVal);
-}
-
-function getValue() {
-    //output element??
-    const outputElement = document.getElementById('output');
-    const userData = myData.getValue();
-
-    console.log("AM i in getValue???");
-
-    let output = '';
-    userData.forEach((data, index) => {
-    output += `User ${index + 1}: `;
-    data.forEach((item) => {
-        output += `${item}, `;
-    });
-    output = output.slice(0, -2); // Remove the extra comma and space
-    output += "<br>";
-    });
-
-    outputElement.innerHTML = output;
-}
-
-function getValueAt(index) {
+function getValueAt(outerIndex, innerIndex) {
     //output element??
     const outputElement = document.getElementById('output');
     const value = userData.getIndividualValue(outerIndex, innerIndex);
@@ -108,10 +105,17 @@ function twoUsersData() {
     }
     //console.log("init twoUserData OC");
 
-    user1.getValue();
+    //TEsting getValue does NOT WORK??????
+    let temp = user1.getValue();
     console.log("return twoUserData in div under button");
-
-
+/*
+    //test .getValueaAt()
+    for(let key2 in testData2) {
+        let value2 = testData2[key2];
+        user1.setValue2(key2, value2);
+        console.log("key2: " + key2 + ", value2: " + value2);
+    }
+*/
     /*
     //init user2 data
     user2.setValue1();
