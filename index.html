@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
 
+    <script src="js/importData.js" defer></script>
     <script src="js/paramDBs.js" defer></script>
     <script src="js/paramOCs.js" defer></script>
     <script src="js/makeUser.js" defer></script>
@@ -209,12 +210,8 @@
     <!--- Section 8 -->
     <div class="bold">Section 8</div>
     <div>Ideally have functionality for import/exporting specified form fields</div>
-    <!---
-    <input type="text">
-    <button>Import</button>
-    <button>Export</button>
-    -->
-    <br>
+    <button type="button" onclick="importData()" id="import-Btn">Quick Input</button>
+    <br><br>
 
     <!--- Section 9 -->
     <div id="how-to-use"></div>
