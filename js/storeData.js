@@ -1,5 +1,9 @@
 //unsure if want to store 1 userData or all userData in one area
-
+//edit----------
+//for now copy this code into twoUSersData as tesiting grounds
+//havent done what i below this line yet
+//turning let userData -> function userData
+//turning ',' in between items {} -> ';' amongst class functions
 let userData = {
     userData: [[], []],
     setValue1: function(stringVar, btnChoice) {
