@@ -41,9 +41,12 @@ class userData {
         //returns a copy of all user data in 
         const outputElement = document.getElementById('output');
 
-        //console.log("AM i in getValue???");
+        let formatting = ["Deal-breakers/Must-haves", "Other Considerations"];
 
         let output = '';
+        output += "<br>"; //aestheics fo website
+        //og gpt prompt
+        /*
         this.userData.forEach((data, index) => {
             output += `User ${index + 1}: `;
             data.forEach((item) => {
@@ -52,24 +55,38 @@ class userData {
             output = output.slice(0, -2); // Remove the extra comma and space
             output += "<br>";
         });
+        */
+
+        //my prompt
+        let index = 0;
+        for(let header of formatting) {
+            output += header + "<br>";
+            for(let key of this.userData[index]) {
+                //honestly this refernce is cooked, and im brute forcing it
+                //
+                output += "->" + key[0] + ": "+ key[1] + "<br>";
+            }
+            output += "<br>";
+        }
 
         outputElement.innerHTML = output;
     }
-    
-}
-//dont need these functions???? that were defined in storeData
 
-function getValueAt(outerIndex, innerIndex) {
-    //output element??
-    const outputElement = document.getElementById('output');
-    const value = userData.getIndividualValue(outerIndex, innerIndex);
-  
-    if (value) {
-      outputElement.textContent = `Value at userData[${outerIndex}][${innerIndex}]: ${value}`;
-    } else {
-      outputElement.textContent = `Invalid index provided.`;
+    //write to html, testing IP
+    getValueAt(outerIndex, innerIndex) {
+        //output element??
+        const outputElement = document.getElementById('output');
+        const value = userData.getIndividualValue(outerIndex, innerIndex);
+      
+        if (value) {
+          outputElement.textContent = `Value at userData[${outerIndex}][${innerIndex}]: ${value}`;
+        } else {
+          outputElement.textContent = `Invalid index provided.`;
+        }
     }
 }
+
+//make var user here, so i could refernce them later on???
 
 //the actual implementation of storing data and referencing it
 function twoUsersData() {
