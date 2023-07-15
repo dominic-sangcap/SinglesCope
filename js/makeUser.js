@@ -120,6 +120,10 @@ function makeUser() {
     ocBtn.disabled = true;
 
     //turn off hidden visiblity when makining second user in section 3.2, probably turn this into a function later
-    const hiddenBtn = document.getElementById('wasHidden1');
-    hiddenBtn.style.visibility = "visible";
+    //only create this if there are OCs
+    if (size2) {
+        const hiddenBtn = document.getElementById('wasHidden1');
+        hiddenBtn.style.display = "block";
+    }
+    
 }
