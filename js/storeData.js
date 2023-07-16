@@ -64,14 +64,25 @@ class compareData {
     }
     //calulate oc differences put into calcCS[0]
     calc_oc_diffs() {
-        console.log("Calc differences: ");
-        for(let array in calcCS) {
-            for(let index in allUserData[array]) {
-                for(let item in allUserData[user][index]) {
-                    console.log("user: " + user + "| index: " + index + "| item: " + item 
-                    + "| Descrip: " + allUserData[user][index][item][0] + "-Value:" + allUserData[user][index][item][1]);
-                }
-            }
+        console.log("Calc differences in Range Values: ");
+        let user1 = 0;
+        let user2 = 1;
+        let oC = 1;
+        for(let item in allUserData[0][oC]) {
+            console.log("user: " + user1 + "| index: " + 0 + "| item: " + item 
+            + "| Descrip: " + allUserData[user1][oC][item][0] + "-Value:" + allUserData[user1][oC][item][1]);
+            console.log("user: " + user2 + "| index: " + 0 + "| item: " + item 
+            + "| Descrip: " + allUserData[user2][oC][item][0] + "-Value:" + allUserData[user2][oC][item][1]);
+            
+
+            //calculate abs(difference of range values)
+            let range1 = allUserData[user1][oC][item][1];
+            let range2 = allUserData[user2][oC][item][1];
+            console.log("Range1: " + range1 + " | Range2: " + range2, " | Total: " + Math.abs(range1 - range2));
+
+            //edgecase for if one is is must-have & other is dealB: use ternary operator
+            let range_diff = Math.abs(range1 - range2);
+            calcCS[oC].push([allUserData[user1][oC][item][0], range_diff])
         }
     }
 
@@ -85,7 +96,10 @@ function storeData() {
     //testCompData.showAllUserData();
 
     //testing 2-db_diff *Works
-    //testCompData.calc_db_diffs();
+    testCompData.calc_db_diffs();
+
+    //testing 3-OC_diff *Works
+    testCompData.calc_oc_diffs();
 
     //testing XYZ-show_calcCS
     testCompData.show_calCS();
