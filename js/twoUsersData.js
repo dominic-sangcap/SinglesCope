@@ -86,6 +86,7 @@ class userData {
 //make var user here, so i could refernce them later on???
 
 //the actual implementation of storing data and referencing it
+//change to getting data from user1, user2, pushing onto global var: allUserData
 function twoUsersData() {
     //console.log("in twoUserData");
     let user1 = new userData();
@@ -94,8 +95,8 @@ function twoUsersData() {
     //test input for user1
     let testData1 = {
         "doesnt like boba": "dealbreaker",
-        "flat earther": "dealbreaker",
-        "ugly af": "dealbreaker",
+        "flat earther": "indifferent",
+        "ugly af": "must-have",
     }
     let testData2 = {
         "sense of humor": 7,
@@ -139,18 +140,18 @@ function twoUsersData() {
 
     //test getItemAt()
     let num1 = 0;
-    let num2 = 0;
-    console.log("getItemAt[" + num1 + "]: "+ user1.getItemAt(num1));
-    console.log("getItemAt[" + num2 + "]: "+ user2.getItemAt(num2));
+    let num2 = 1;
+    console.log("getItemAt[" + num1 + "]: " + user1.getItemAt(num1));
+    console.log("getItemAt[" + num2 + "]: " + user1.getItemAt(num2));
 
     //test sendtoSD()
     user1.sendtoSD();
 //----------------------user2
     //test input for user2
     let testData3 = {
-        "doesnt like boba": "dealbreaker",
-        "dino earther": "dealbreaker",
-        "cute af": "must-have",
+        "doesnt like boba": "must-have",
+        "flat earther": "dealbreaker",
+        "ugly af": "indifferent",
     }
     let testData4 = {
         "sense of humor": 2,
