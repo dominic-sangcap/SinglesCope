@@ -24,18 +24,19 @@ class userData {
     getUserData() {
         return this.userData;
     }
-
-    //returns a value at key
-    getValueAt(outerIndex, innerIndex) {
+    
+    //returns either the dbArray at index[0] or ocArray at index[1]
+    getItemAt(index) {
         //getValue at specified index
-        if (outerIndex >= 0 && outerIndex < this.userData.length) {
-            const innerArray = this.userData[outerIndex];
-            if (innerIndex >= 0 && innerIndex < innerArray.length) {
-                return innerArray[innerIndex];
-            }
+        if (index == 0) {
+            return this.userData[0];
+        }
+        else if (index == 1) {
+            return this.userData[1];
         }
         return null;
     }
+
     //write to html, testing IP
     getValue() {
         //returns a copy of all user data in 
@@ -65,11 +66,12 @@ class userData {
     //NOte** might have to really think about the structure of how elements stored
     getValueAt(outerIndex, arrayItem) {
         //output element??
+        //maybe just return the item at index
         const outputElement = document.getElementById('output1');
         const value = arrayItem[1];
         
         if (value != null) {
-          outputElement.textContent = `Value at userData[${outerIndex}][${arrayItem[0]}]: ${arrayItem[1]}`;
+          outputElement.textContent = `Value at userData[${outerIndex}][${arrayItem[0]}]: ${value}`;
         } else {
           outputElement.textContent = `Invalid index provided.`;
         }
@@ -130,6 +132,11 @@ function twoUsersData() {
         }
     }
 
+    //test getItemAt()
+    let num1 = 0;
+    let num2 = 0;
+    console.log("getItemAt[" + num1 + "]: "+ user1.getItemAt(num1));
+    console.log("getItemAt[" + num2 + "]: "+ user1.getItemAt(num2));
     /*
     //init user2 data
     user2.setValue1();
