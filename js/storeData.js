@@ -1,67 +1,26 @@
 //unsure if want to store 1 userData or all userData in one area
-//edit----------
-//for now copy this code into twoUSersData as tesiting grounds
-//havent done what i below this line yet
-//turning let userData -> function userData
-//turning ',' in between items {} -> ';' amongst class functions
-let userData = {
-    userData: [[], []],
-    setValue1: function(stringVar, btnChoice) {
-        this.userData[0].push([stringVar, btnChoice]);
-    },
-    setValue2: function(stringVar2, rangeVal) {
-        this.userData[1].push([stringVar2, rangeVal]);
-    },
-    getValue: function() {
-        //returns a copy of all user data in 
-        return this.userData;
-    }, 
-    getValueAt: function(outerIndex, innerIndex) {
-        //getValue at specified index
-        if (outerIndex >= 0 && outerIndex < this.userData.length) {
-            const innerArray = this.userData[outerIndex];
-            if (innerIndex >= 0 && innerIndex < innerArray.length) {
-                return innerArray[innerIndex];
+//use var to store data, and calculate Stuff???
+//create a different class userData with calculate functions???
+
+//global variable
+var allUserData = [];
+
+//
+/*
+class storeData {
+}
+*/
+
+function storeData() {
+    console.log("size of allUserData: " + allUserData.length);
+    console.log(allUserData[0]);
+    console.log(allUserData[1]);
+    for(let user in allUserData) {
+        for(let index in allUserData[user]) {
+            for(let item in allUserData[user][index]) {
+                console.log("user: " + user + "| index: " + index + "| item: " + item 
+                + "| Descrip: " + allUserData[user][index][item][0] + "-Value:" + allUserData[user][index][item][1]);
             }
         }
-        return null;
-    }
-}
-
-function setValue1(stringVar, btnChoice) {
-    userData.setValue1(stringVar, btnChoice);
-}
-
-function setValue2(stringVar2, rangeVal) {
-    userData.setValue2(stringVar2, rangeVal);
-}
-
-function getValue() {
-    //output element??
-    const outputElement = document.getElementById('output');
-    const userData = myData.getValue();
-
-    let output = '';
-    userData.forEach((data, index) => {
-    output += `User ${index + 1}: `;
-    data.forEach((item) => {
-        output += `${item}, `;
-    });
-    output = output.slice(0, -2); // Remove the extra comma and space
-    output += "<br>";
-    });
-
-    outputElement.innerHTML = output;
-}
-
-function getValueAt(index) {
-    //output element??
-    const outputElement = document.getElementById('output');
-    const value = userData.getIndividualValue(outerIndex, innerIndex);
-  
-    if (value) {
-      outputElement.textContent = `Value at userData[${outerIndex}][${innerIndex}]: ${value}`;
-    } else {
-      outputElement.textContent = `Invalid index provided.`;
     }
 }

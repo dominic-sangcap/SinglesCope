@@ -9,7 +9,7 @@ items in array -> methods of a class object
 */
 class userData {
     constructor() {
-        this.userData= [[], []];
+        this.userData = [[], []];
     }
 
     setValue1(stringVar, btnChoice) {
@@ -20,7 +20,7 @@ class userData {
         this.userData[1].push([stringVar2, rangeVal]);
     }
 
-    //dont know if this is needed
+    //dont know if this is needed, *only works if project is setup with modules
     getUserData() {
         return this.userData;
     }
@@ -75,6 +75,11 @@ class userData {
         } else {
           outputElement.textContent = `Invalid index provided.`;
         }
+    }
+
+    //send to storeData var
+    sendtoSD() {
+        allUserData.push(this.userData);
     }
 }
 
@@ -136,10 +141,35 @@ function twoUsersData() {
     let num1 = 0;
     let num2 = 0;
     console.log("getItemAt[" + num1 + "]: "+ user1.getItemAt(num1));
-    console.log("getItemAt[" + num2 + "]: "+ user1.getItemAt(num2));
-    /*
-    //init user2 data
-    user2.setValue1();
-    user2.setValue2();
-    */
+    console.log("getItemAt[" + num2 + "]: "+ user2.getItemAt(num2));
+
+    //test sendtoSD()
+    user1.sendtoSD();
+//----------------------user2
+    //test input for user2
+    let testData3 = {
+        "doesnt like boba": "dealbreaker",
+        "dino earther": "dealbreaker",
+        "cute af": "must-have",
+    }
+    let testData4 = {
+        "sense of humor": 2,
+        "has a birthday holiday": 1,
+        "makes no money": 5,
+    }
+
+    //init user1 data
+    console.log("User 2----");
+    for(let key3 in testData3) {
+        let value3 = testData3[key3];
+        user2.setValue1(key3, value3);
+    }
+
+    for(let key4 in testData4) {
+        let value4 = testData4[key4];
+        user2.setValue2(key4, value4);
+    }
+
+    //test sendtoSD()
+    user2.sendtoSD();
 }
