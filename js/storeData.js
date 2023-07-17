@@ -17,11 +17,11 @@ const dataVar = {
 
 //db-mh percentage chart 
 const chartPercent = {
-    '-2': .1,
-    '-1': .4,
-    '0': .5,
-    '1': .6, 
-    '2': .9,
+    "-2": .1,
+    "-1": .4,
+    "0": .5,
+    "1": .6, 
+    "2": .9,
 };
 
 const chartPercent2 = {
@@ -109,7 +109,38 @@ class compareData {
             calcCS[oC].push([allUserData[user1][oC][item][0], range_diff])
         }
     }
-
+    //calculate dbMath
+    dbMath() {
+        let percent = 0;
+        //value = [string, int]
+        for(let value of calcCS[0]) {
+            let addThis = chartPercent[value[1]] * (1/calcCS[0].length);
+            console.log("value: " + value + "| chartPercent: " + chartPercent[value[1]] + "| 1/x: " + (calcCS[0].length/1));
+            percent += addThis;
+            console.log("addThis: " + addThis + "| Current percent: " + percent);
+        }
+        //half this number as it is only half the calculation
+        percent *= 0.5 * 100;
+        percent = parseFloat(percent).toFixed(2)
+        //either reutrn this value or send it somwhere
+        console.log("Final Percent: " + percent);
+    }
+    //calculate ocMath
+    ocMath() {
+        let percent2 = 0;
+        //value = [string, int]
+        for(let value2 of calcCS[1]) {
+            let addThis2 = chartPercent2[value2[1]] * (1/calcCS[1].length);
+            console.log("value: " + value2 + "| chartPercent: " + chartPercent2[value2[1]] + "| 1/x: " + (1/calcCS[1].length));
+            percent2 += addThis2;
+            console.log("addThis2: " + addThis2 + "| Current percent2: " + percent2);
+        }
+        //half this number as it is only half the calculation
+        percent2 *= 0.5 * 100;
+        percent2 = parseFloat(percent2).toFixed(2)
+        //either reutrn this value or send it somwhere
+        console.log("Final Percent: " + percent2);
+    }
 }
 
 //This is called ideally when user hits Check Compatibility results---eventually
@@ -127,4 +158,10 @@ function storeData() {
 
     //testing XYZ-show_calcCS
     testCompData.show_calCS();
+
+    //testing 4-dbMath
+    testCompData.dbMath();
+
+    //testing 5-ocMath
+    testCompData.ocMath();
 }
