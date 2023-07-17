@@ -8,6 +8,9 @@ var allUserData = [];
 //will i need a variable to stoe calculations???
 var calcCS = [[], []];
 
+//blasphemous storage fo score
+var finalScore = [,];
+
 //db-mh values for calculating compatibilty
 const dataVar = {
     "dealbreaker": -1,
@@ -114,19 +117,21 @@ class compareData {
     }
     //calculate dbMath
     dbMath() {
-        let percent = 0;
+        let percent1 = 0;
         //value = [string, int]
         for(let value of calcCS[0]) {
             let addThis = chartPercent[value[1]] * (1/calcCS[0].length);
             console.log("value: " + value + "| chartPercent: " + chartPercent[value[1]] + "| 1/x: " + (calcCS[0].length/1));
-            percent += addThis;
-            console.log("addThis: " + addThis + "| Current percent: " + percent);
+            percent1 += addThis;
+            console.log("addThis: " + addThis + "| Current percent: " + percent1);
         }
         //half this number as it is only half the calculation
-        percent *= 0.5 * 100;
-        percent = parseFloat(percent).toFixed(2)
+        percent1 *= 0.5 * 100;
+        percent1 = parseFloat(percent1).toFixed(2);
+
         //either reutrn this value or send it somwhere
-        console.log("Final Percent db: " + percent);
+        finalScore[0] = percent1;
+        console.log("Final Percent db: " + percent1);
     }
     //calculate ocMath
     ocMath() {
@@ -141,9 +146,17 @@ class compareData {
         //half this number as it is only half the calculation
         percent2 *= 0.5 * 100;
         percent2 = parseFloat(percent2).toFixed(2)
+
         //either reutrn this value or send it somwhere
+        finalScore[1] = percent2;
         console.log("Final Percent oc: " + percent2);
     }
+    //calcScore
+    calcScore() {
+        console.log("Toatal score = " + (Number(finalScore[0]) + Number(finalScore[1])));
+        return Number(finalScore[0]) + Number(finalScore[1]);
+    }
+
 }
 
 //This is called ideally when user hits Check Compatibility results---eventually
@@ -167,4 +180,16 @@ function storeData() {
 
     //testing 5-ocMath
     testCompData.ocMath();
+
+    //testing 6-calcScore
+    let coupleScore = testCompData.calcScore();
+    let changeDiv = document.getElementById("Compatibility-Score");
+    let nextDiv = document.createElement('div');
+    nextDiv.classList.add("doin-Alot");
+    nextDiv.textContent = coupleScore + "%";
+    changeDiv.insertAdjacentElement('afterend', nextDiv);
+
+    //disable Compatibility Results
+    let disableMe2 = document.getElementById("Btn-Compat");
+    disableMe2.disabled = true;
 }

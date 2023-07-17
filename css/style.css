@@ -64,3 +64,9 @@ form {
 .fq-input{
     border-bottom: dashed;
 }
+
+/* Section 7 */
+.doin-Alot {
+    font-weight: bold;
+    text-decoration: underline;
+}

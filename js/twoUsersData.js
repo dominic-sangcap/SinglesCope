@@ -93,11 +93,11 @@ function twoUsersData() {
     let user2 = new userData();
 
     //variable from data
+    console.log("User 1----");
     let testData1 = getDBs();
     let testData2 = getOCs();
 
     //init user1 data from user input
-    console.log("User 1----");
     for(let key in testData1) {
         let value = testData1[key];
         user1.setValue1(key, value);
@@ -118,11 +118,10 @@ function twoUsersData() {
     user1.sendtoSD();
 
     //init user2 data from user input
-
+    console.log("User 2----");
     let testData3 = paramDBs(3, 3, 2, 'secUser');
     let testData4 = paramOCs(4, 4, 2);
 
-    console.log("User 2----");
     for(let key3 in testData3) {
         let value3 = testData3[key3];
         user2.setValue1(key3, value3);
@@ -135,4 +134,8 @@ function twoUsersData() {
 
     //test sendtoSD()
     user2.sendtoSD();
+
+    //disable lock in answers 2
+    let disableMe = document.getElementById("Lock-In-2");
+    disableMe.disabled = true;
 }
