@@ -114,31 +114,14 @@ function twoUsersData() {
     }
     //console.log("init twoUserData OC");
 
-    // console.log("user1[0].length: "+ num);
-    for(let i = 0; i < user1.userData.length; i++) {
-        for (let item of user1.userData[i]) {
-            //iterate over the userData[i][These [x, y] values]
-            //let value = user1.getValueAt(i, item);
-            console.log("getValueAt[" + i + "][" + item[0] + "]:  " + item[1]);
-        }
-    }
-
     //test sendtoSD()
     user1.sendtoSD();
-//----------------------user2
-    //test input for user2
-    let testData3 = {
-        "doesnt like boba": "must-have",
-        "flat earther": "dealbreaker",
-        "ugly af": "indifferent",
-    }
-    let testData4 = {
-        "sense of humor": 7,
-        "has a birthday holiday": 10,
-        "makes no money": 4,
-    }
 
-    //init user1 data
+    //init user2 data from user input
+
+    let testData3 = paramDBs(3, 3, 2, 'secUser');
+    let testData4 = paramOCs(4, 4, 2);
+
     console.log("User 2----");
     for(let key3 in testData3) {
         let value3 = testData3[key3];
@@ -150,16 +133,6 @@ function twoUsersData() {
         user2.setValue2(key4, value4);
     }
 
-    // console.log("user1[0].length: "+ num);
-    for(let i = 0; i < user2.userData.length; i++) {
-        for (let item of user2.userData[i]) {
-            //iterate over the userData[i][These [x, y] values]
-            let value = user2.getValueAt(i, item);
-            console.log("getValueAt[" + i + "][" + item[0] + "]:  " + item[1] + "| value: " + value);
-        }
-    }
-
     //test sendtoSD()
     user2.sendtoSD();
-
 }
