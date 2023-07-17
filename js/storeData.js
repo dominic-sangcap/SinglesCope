@@ -83,6 +83,9 @@ class compareData {
 
             //edgecase for if one is is must-have & other is dealB: use ternary operator
             let diff_of_users = ((matric1 * matric2) != -1) ? matric1 + matric2 : -2;
+            if (matric1 == -1 && matric2 == -1) {
+                diff_of_users = 2;
+            }
             calcCS[0].push([allUserData[0][0][item][0], diff_of_users])
         }
     }
@@ -123,7 +126,7 @@ class compareData {
         percent *= 0.5 * 100;
         percent = parseFloat(percent).toFixed(2)
         //either reutrn this value or send it somwhere
-        console.log("Final Percent: " + percent);
+        console.log("Final Percent db: " + percent);
     }
     //calculate ocMath
     ocMath() {
@@ -139,7 +142,7 @@ class compareData {
         percent2 *= 0.5 * 100;
         percent2 = parseFloat(percent2).toFixed(2)
         //either reutrn this value or send it somwhere
-        console.log("Final Percent: " + percent2);
+        console.log("Final Percent oc: " + percent2);
     }
 }
 
