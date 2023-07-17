@@ -92,19 +92,11 @@ function twoUsersData() {
     let user1 = new userData();
     let user2 = new userData();
 
-    //test input for user1
-    let testData1 = {
-        "doesnt like boba": "dealbreaker",
-        "flat earther": "indifferent",
-        "ugly af": "must-have",
-    }
-    let testData2 = {
-        "sense of humor": 7,
-        "has a birthday holiday": 10,
-        "makes a lot of money": 5,
-    }
+    //variable from data
+    let testData1 = getDBs();
+    let testData2 = getOCs();
 
-    //init user1 data
+    //init user1 data from user input
     console.log("User 1----");
     for(let key in testData1) {
         let value = testData1[key];
@@ -122,27 +114,14 @@ function twoUsersData() {
     }
     //console.log("init twoUserData OC");
 
-    //Testing getValue, print to html div element
-    let temp = user1.getValue();
-    //console.log("return twoUserData in div under button");
-
-    //test .getValueaAt()
-    console.log("Ideally this wroks 1st try: getValueat(x, y)---Test1s");
-    //let num = user1[0].length;
-   // console.log("user1[0].length: "+ num);
+    // console.log("user1[0].length: "+ num);
     for(let i = 0; i < user1.userData.length; i++) {
         for (let item of user1.userData[i]) {
             //iterate over the userData[i][These [x, y] values]
-            let value = user1.getValueAt(i, item);
+            //let value = user1.getValueAt(i, item);
             console.log("getValueAt[" + i + "][" + item[0] + "]:  " + item[1]);
         }
     }
-
-    //test getItemAt()
-    let num1 = 0;
-    let num2 = 1;
-    console.log("getItemAt[" + num1 + "]: " + user1.getItemAt(num1));
-    console.log("getItemAt[" + num2 + "]: " + user1.getItemAt(num2));
 
     //test sendtoSD()
     user1.sendtoSD();
@@ -154,9 +133,9 @@ function twoUsersData() {
         "ugly af": "indifferent",
     }
     let testData4 = {
-        "sense of humor": 2,
-        "has a birthday holiday": 1,
-        "makes no money": 5,
+        "sense of humor": 7,
+        "has a birthday holiday": 10,
+        "makes no money": 4,
     }
 
     //init user1 data
@@ -171,6 +150,16 @@ function twoUsersData() {
         user2.setValue2(key4, value4);
     }
 
+    // console.log("user1[0].length: "+ num);
+    for(let i = 0; i < user2.userData.length; i++) {
+        for (let item of user2.userData[i]) {
+            //iterate over the userData[i][These [x, y] values]
+            let value = user2.getValueAt(i, item);
+            console.log("getValueAt[" + i + "][" + item[0] + "]:  " + item[1] + "| value: " + value);
+        }
+    }
+
     //test sendtoSD()
     user2.sendtoSD();
+
 }

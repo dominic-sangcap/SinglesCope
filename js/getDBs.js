@@ -5,6 +5,9 @@ function getDBs() {
     let size = outerDiv.getElementsByTagName('p').length;
     console.log('count of paragraphs in outerDiv: '+ size);
 
+    //new return var
+    let retUser1 = {};
+
     for (var i = 0; i < size; i++) {
         var innerDiv = outerDiv.querySelector('#testDynam' + i);
         var form = innerDiv.querySelector('#form-' + i);
@@ -16,9 +19,12 @@ function getDBs() {
             var selectedValue = selectedOption.value;
             //get input value from paragraph
             var pElement = outerDiv.getElementsByTagName('p')[i].textContent;
-            console.log(i + ". |User input: " + pElement + ", Selected button: " + selectedValue);      
+            console.log(i + ". |User input: " + pElement + ", Selected button: " + selectedValue);  
+            retUser1[pElement] =  selectedValue;
         } else {
             console.log("No button selected.");
+            retUser1[pElement] =  null;
         }
     } 
+    return retUser1;
 }

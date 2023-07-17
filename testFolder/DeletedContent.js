@@ -83,4 +83,59 @@ function buttonSelect() {
   
 }
 
+//from twoUsersData.js
+    //test input for user1
+    let testData1 = {
+        "doesnt like boba": "dealbreaker",
+        "flat earther": "indifferent",
+        "ugly af": "must-have",
+    }
+    let testData2 = {
+        "sense of humor": 7,
+        "has a birthday holiday": 10,
+        "makes a lot of money": 5,
+    }
+
+    //init user1 data
+    console.log("User 1----");
+    for(let key in testData1) {
+        let value = testData1[key];
+        user1.setValue1(key, value);
+        //in user1, this pushes a [key, value] into user1[0]
+        //console.log("key: " + key + ", value: " + value);
+    }
+    //console.log("init twoUserData DB");
+
+    for(let key2 in testData2) {
+        let value2 = testData2[key2];
+        user1.setValue2(key2, value2);
+        //in user1, this pushes a [key, value] into user1[1]
+        //console.log("key2: " + key2 + ", value2: " + value2);
+    }
+    //console.log("init twoUserData OC");
+
+    //Testing getValue, print to html div element
+    let temp = user1.getValue();
+    //console.log("return twoUserData in div under button");
+
+    //test .getValueaAt()
+    console.log("Ideally this wroks 1st try: getValueat(x, y)---Test1s");
+    //let num = user1[0].length;
+   // console.log("user1[0].length: "+ num);
+    for(let i = 0; i < user1.userData.length; i++) {
+        for (let item of user1.userData[i]) {
+            //iterate over the userData[i][These [x, y] values]
+            let value = user1.getValueAt(i, item);
+            console.log("getValueAt[" + i + "][" + item[0] + "]:  " + item[1]);
+        }
+    }
+
+    //test getItemAt()
+    let num1 = 0;
+    let num2 = 1;
+    console.log("getItemAt[" + num1 + "]: " + user1.getItemAt(num1));
+    console.log("getItemAt[" + num2 + "]: " + user1.getItemAt(num2));
+
+    //test sendtoSD()
+    user1.sendtoSD();
 */
