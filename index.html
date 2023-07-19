@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
 
+    <script src="js/statShow.js" defer></script>
     <script src="js/storeData.js" defer></script>
     <script src="js/twoUsersData.js" defer></script>
     <script src="js/importData.js" defer></script>
@@ -156,8 +157,9 @@
 
     <!--- Section 7 -->
     <div class="bold">Section 7</div>
-    <button type="button">Explantion of Stats</button>
-    <br><br>
+    <button type="button" onclick="statShow()" id="stat-Btn">Explantion of Stats</button>
+    <p id="stat-padding"></p>
+    <br>
 
     <!--- Section 8 -->
     <div class="bold">Section 8</div>
@@ -168,7 +170,11 @@
     <!--- Section 9 -->
     <div id="how-to-use"></div>
     <div class="bold">Section 9, ATM test zone</div>
-    <p draggable="true">How to Use Website...</p>
+    <p draggable="true">Input data in section 1 and Add+ until satisfied. <br>
+        Fill out Section 2.1 and 2.2. Lock-In Answers. <br>
+        Fill out Section 3.1 and 3.2. Lock-in Answers2. <br>
+        Check Compatibility Score. Explanation of Stats.
+    </p>
     <!--Testing ground for twoUsersData, in Lock-In Ans2, and check compatibility scores bts
     <button type="button" onclick="twoUsersData()">Test twoUsersData</button>
     <button type="button" onclick="storeData()">Test storeData</button> 
