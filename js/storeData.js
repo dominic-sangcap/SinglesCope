@@ -156,6 +156,21 @@ class compareData {
         console.log("Toatal score = " + (Number(finalScore[0]) + Number(finalScore[1])));
         return Number(finalScore[0]) + Number(finalScore[1]);
     }
+}
+
+//memeQuote
+function memeQuote(number) {
+    if (number < 0) {
+        //edge case, since -1 cannot be a key value in object
+        return "Honestly, just give up";
+    } else if(number > 100) {
+        return lQuotes[11];
+    } else if(number >= 0 && number <= 100) {
+        const rangeKey = Math.floor(number / 10); 
+        return lQuotes[rangeKey];
+    } else {
+        return "Percent not in certified range???"
+    }
 
 }
 
@@ -188,6 +203,14 @@ function storeData() {
     nextDiv.classList.add("doin-Alot");
     nextDiv.textContent = coupleScore + "%";
     changeDiv.insertAdjacentElement('afterend', nextDiv);
+    //ref coupleScore and output meme quote based on percentage
+    console.log("start memquote-------");
+    let brItem = document.createElement('br');
+    nextDiv.insertAdjacentElement('afterend', brItem);
+    let nextDiv2 = document.createElement('div');
+    nextDiv2.textContent = '"' + memeQuote(coupleScore) + '"';
+    brItem.insertAdjacentElement('afterend', nextDiv2);
+    console.log("end memquote-------");
 
     //disable Compatibility Results
     let disableMe2 = document.getElementById("Btn-Compat");
