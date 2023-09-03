@@ -1,3 +1,4 @@
+//qwippy quotes based on numeric results
 var lQuotes = {
     0: "Mortal enemies, no chance of improving relationship",
     1: "As compatible as paper attempting to stay dry in water, it wont' last long",

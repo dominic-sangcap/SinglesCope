@@ -8,9 +8,9 @@ function rangeSelect() {
     var rangeValue = slideRange.value;
   
     if (rangeValue) {
-      console.log("Range Slide Value: " + rangeValue);
+      //console.log("Range Slide Value: " + rangeValue);
     } else {
-      console.log("SHould still be set value of 5: " + rangeValue);
+      //console.log("SHould still be set value of 5: " + rangeValue);
     }
     
   }

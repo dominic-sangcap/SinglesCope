@@ -1,6 +1,5 @@
 //testing ground for Data stuff
 
-//test 1, turn let userData into a class w/ constructor
 /*
 Notables:
 let userData -> class userData

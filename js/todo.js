@@ -48,16 +48,7 @@ form.addEventListener("submit", (e) => {
         inputB.value = key;
         //this makes all instance of current buttons unique click amongst group
         inputB.name = "option" + dbmhCount.toString(); //need to add dynamicstring name so all buttons are different
-        //allow for checking radio button state change, honestly dont even know if this works or nots
-        /*
-        //probably get rid of this, does not work...probably didnt work bc input already defined by const at beg of file
-        input.addEventListener('change', () => {
-            Object.keys(data).forEach(key => {
-                data[key] = false;
-            })
-            data[key] = true;
-        });
-        */
+ 
         label.appendChild(inputB);
         formElement.appendChild(label);
     }

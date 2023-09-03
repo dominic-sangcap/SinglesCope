@@ -2,7 +2,7 @@
 //use var to store data, and calculate Stuff???
 //create a different class userData with calculate functions???
 
-//global variable
+//not a global variable???
 var allUserData = [];
 
 //will i need a variable to stoe calculations???

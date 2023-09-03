@@ -14,10 +14,10 @@ function buttonSelect2() {
         var selectedValue = selectedOption.value;
         //get input value from paragraph
         var pElement = outerDiv.getElementsByTagName('p')[0].textContent;
-        console.log("User input: " + pElement);
-        console.log("Selected button: " + selectedValue);        
+        //console.log("User input: " + pElement);
+        //console.log("Selected button: " + selectedValue);        
     } else {
-        console.log("No button selected.");
+        //console.log("No button selected.");
     }
   }
   

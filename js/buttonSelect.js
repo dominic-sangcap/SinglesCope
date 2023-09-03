@@ -11,9 +11,9 @@ function buttonSelect() {
 
   if (selectedOption) {
     var selectedValue = selectedOption.value;
-    console.log("Selected button: " + selectedValue);
+    //console.log("Selected button: " + selectedValue);
   } else {
-    console.log("No button selected.");
+    //console.log("No button selected.");
   }
   
 }

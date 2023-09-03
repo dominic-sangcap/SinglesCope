@@ -2,7 +2,7 @@
 function paramDBs(x_od, y_id, f_id, i_name) {
     var outerDiv = document.getElementById('todo-lane' + x_od);
     let size = outerDiv.getElementsByTagName('p').length;
-    console.log('count of paragraphs in outerDiv: '+ size);
+    //console.log('count of paragraphs in outerDiv: '+ size);
 
     //newly added return value
     let retUser2 = {};
@@ -18,10 +18,10 @@ function paramDBs(x_od, y_id, f_id, i_name) {
             var selectedValue = selectedOption.value;
             //get input value from paragraph
             var pElement = outerDiv.getElementsByTagName('p')[i].textContent;
-            console.log(i + ". |User input: " + pElement + ", Selected button: " + selectedValue);
+            //console.log(i + ". |User input: " + pElement + ", Selected button: " + selectedValue);
             retUser2[pElement] =  selectedValue;      
         } else {
-            console.log("No button selected.");
+            //console.log("No button selected.");
             retUser2[pElement] =  null;   
         }
     }
