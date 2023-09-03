@@ -136,7 +136,7 @@ function memeQuote(number) {
     } else if(number > 100) {
         return lQuotes[11];
     } else if(number >= 0 && number <= 100) {
-        const rangeKey = Math.floor(number / 10); 
+        var rangeKey = Math.floor(number / 10); 
         return lQuotes[rangeKey];
     } else {
         return "Percent not in certified range???"

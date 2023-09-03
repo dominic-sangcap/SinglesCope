@@ -1,23 +1,23 @@
 //dynamic creation from user input into form for section 2.2 *consider
-const form2 = document.getElementById("todo-form2");
-const input2 = document.getElementById("todo-input2");
-const todoLane2 = document.getElementById("todo-lane2");
+var form2 = document.getElementById("todo-form2");
+var input2 = document.getElementById("todo-input2");
+var todoLane2 = document.getElementById("todo-lane2");
 
 let fqCount = 0;
 
 form2.addEventListener("submit", (e) => {
     e.preventDefault();
-    const value2 = input2.value;
+    var value2 = input2.value;
 
     if (!value2) return;
 
     //turn section 2.2 into display: block; on first instance only
     if (fqCount == 0) {
-        const hiddenBtn = document.getElementById('wasHidden0');
+        var hiddenBtn = document.getElementById('wasHidden0');
         hiddenBtn.style.display = "block";
     }
 
-    const newTask2 = document.createElement("p");
+    var newTask2 = document.createElement("p");
     newTask2.classList.add("task", "fq-input", "col-1");
     newTask2.innerText = value2;
 

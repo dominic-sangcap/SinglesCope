@@ -67,8 +67,8 @@ class userData {
     getValueAt(outerIndex, arrayItem) {
         //output element??
         //maybe just return the item at index
-        const outputElement = document.getElementById('output1');
-        const value = arrayItem[1];
+        var outputElement = document.getElementById('output1');
+        var value = arrayItem[1];
         
         if (value != null) {
           outputElement.textContent = `Value at userData[${outerIndex}][${arrayItem[0]}]: ${value}`;

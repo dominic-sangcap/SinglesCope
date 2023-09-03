@@ -9,7 +9,7 @@ add_dB_Button2.addEventListener("click", () => {
     //console.log("what is happening???, num:")
     //if get input is empty, do nothing
     //hard note, since there are two event listeners on this button, gotta have variables consistent across stuff or something
-    const value2 = input2.value;
+    var value2 = input2.value;
     if (!value2) return;
 
     //just put addCOunt2 in else, get rid of addCOUnt2-- in if portion???

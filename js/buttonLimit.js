@@ -7,7 +7,7 @@ var updateCounter = document.getElementById('update_counter');
 
 add_dB_Button.addEventListener("click", () => {
     //if get input is empty, do nothing
-    const value = input.value;
+    var value = input.value;
     if (!value) return;
 
     //just put addCOunt in else, get rid of addCOUnt-- in if portion???

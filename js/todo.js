@@ -1,7 +1,7 @@
 //dynamic creation from user input into form for section 2.1 *consider
-const form = document.getElementById("todo-form");
-const input = document.getElementById("todo-input");
-const todoLane = document.getElementById("todo-lane");
+var form = document.getElementById("todo-form");
+var input = document.getElementById("todo-input");
+var todoLane = document.getElementById("todo-lane");
 
 //data for radio buttons *consider
 const data = {
@@ -14,11 +14,11 @@ let dbmhCount = 0;
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    const value = input.value;
+    var value = input.value;
 
     if (!value) return;
 
-    const newTask = document.createElement("p");
+    var newTask = document.createElement("p");
     newTask.classList.add("task", "db-mh-input", "col-1");
     newTask.innerText = value;
 

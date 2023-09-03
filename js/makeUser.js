@@ -16,13 +16,13 @@ function makeUser() {
     }
 
     //recreate DB part
-    const todoLane3 = document.getElementById("todo-lane3");
+    var todoLane3 = document.getElementById("todo-lane3");
     for (let i = 0; i < size; i++) {
         //probably only need this in for loop from getDBs
-        const pElement = outerDiv.getElementsByTagName('p')[i].textContent;
+        var pElement = outerDiv.getElementsByTagName('p')[i].textContent;
 
         //now recreate todo.js functionality in new section
-        const newTask = document.createElement("p");
+        var newTask = document.createElement("p");
         newTask.classList.add("task", "db-mh-input", "col-1");
         newTask.innerText = pElement;
         todoLane3.appendChild(newTask);
@@ -75,13 +75,13 @@ function makeUser() {
     }
     
     //recreate OC part - insert for loop
-    const todoLane4 = document.getElementById("todo-lane4");
+    var todoLane4 = document.getElementById("todo-lane4");
     for (let j = 0; j < size2; j++) {
         //get text content
-        const pElement2 = outerDiv2.getElementsByTagName('p')[j].textContent;
+        var pElement2 = outerDiv2.getElementsByTagName('p')[j].textContent;
 
         //recreate todo2.js functionality
-        const newTask2 = document.createElement("p");
+        var newTask2 = document.createElement("p");
         newTask2.classList.add("task", "fq-input", "col-1");
         newTask2.innerText = pElement2;
 
@@ -110,19 +110,19 @@ function makeUser() {
         todoLane4.appendChild(document.createElement('br'));
     }
     //disable lock in button, so no more adding onto 2nd+ user
-    const user1Btn = document.getElementById('Lock-In-Btn');
+    var user1Btn = document.getElementById('Lock-In-Btn');
     user1Btn.disabled = true;
 
     //also disable Add+ buttons, so no more fields can be created for first user
-    const dbBtn = document.getElementById('add_dB');
+    var dbBtn = document.getElementById('add_dB');
     dbBtn.disabled = true;
-    const ocBtn = document.getElementById('add_oC');
+    var ocBtn = document.getElementById('add_oC');
     ocBtn.disabled = true;
 
     //turn off hidden visiblity when makining second user in section 3.2, probably turn this into a function later
     //only create this if there are OCs
     if (size2) {
-        const hiddenBtn = document.getElementById('wasHidden1');
+        var hiddenBtn = document.getElementById('wasHidden1');
         hiddenBtn.style.display = "block";
     }
     
