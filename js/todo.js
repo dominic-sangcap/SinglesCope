@@ -1,9 +1,9 @@
-//dynamic creation from user input into form for section 2.1
+//dynamic creation from user input into form for section 2.1 *consider
 const form = document.getElementById("todo-form");
 const input = document.getElementById("todo-input");
 const todoLane = document.getElementById("todo-lane");
 
-//data for radio buttons
+//data for radio buttons *consider
 const data = {
     "dealbreaker": false,
     "indifferent": false,

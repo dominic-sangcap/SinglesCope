@@ -1,7 +1,7 @@
 //limit times user can hit submit Button for oC's text
 var add_dB_Button2 = document.getElementById('add_oC');
 var addCount2 = 0; //might have to reference body of input later in future when/if i add functionality to import export data
-var maxCount2 = 5; //allows for 5 entries
+var maxCount2 = 10; //allows for 5 entries
 //new stuff, update counter to show max amount
 var updateCounter2 = document.getElementById('update_counter2');
 
@@ -12,6 +12,7 @@ add_dB_Button2.addEventListener("click", () => {
     const value2 = input2.value;
     if (!value2) return;
 
+    //just put addCOunt2 in else, get rid of addCOUnt2-- in if portion???
     addCount2++;
 
     if (addCount2 > maxCount2) {
@@ -21,7 +22,7 @@ add_dB_Button2.addEventListener("click", () => {
         addCount2--;
         //reference text field, clear it and make pop up message in textField 
         let clearMe2 = document.getElementById('todo-input2');
-        clearMe2.value2 = 'Silly Goose, The max is 5';
+        clearMe2.value2 = 'Silly Goose, The max is 10';
     }
     else {
         //update max count from user input

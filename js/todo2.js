@@ -1,4 +1,4 @@
-//dynamic creation from user input into form for section 2.2
+//dynamic creation from user input into form for section 2.2 *consider
 const form2 = document.getElementById("todo-form2");
 const input2 = document.getElementById("todo-input2");
 const todoLane2 = document.getElementById("todo-lane2");
